@@ -1,0 +1,16 @@
+Fecha de creación: Julio 13, 2012
+Autor: Leidy Tatiana Soto.
+
+Con este proyecto se pretende comunicar un dispositivo Android con un servidor-java.
+
+El servidor-java puede ser compilado en cualquier IDE (Netbeans, Eclipse o Jcreator); la prueba se realizó en Netbeans 7.1.
+
+Para compilar el cliente-android se debe tener instalado el entorno de desarrollo para Android. En la página del grupo pueden encontrar un manual llamado "Manual de instalación entorno de desarrollo Android".
+(http://mwsn.medellin.unal.edu.co/index.php/presentaciones/). La prueba se realizó en Eclipse y el AVD Manager (Android Virtual Device) fue configurado para Android 2.1.
+
+
+Notas:
+
+*En primer lugar se debe ejecutar el servidor-java.
+*Al ejecutar el cliente-android es necesario proporcionar una ip (10.0.2.2) y un puerto (7777) para realizar la conexión.
+*La comunicación sólo se está realizando en una dirección: cliente-android al servidor-java.
