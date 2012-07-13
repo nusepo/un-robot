@@ -1,4 +1,0 @@
-Fecha: 28 de mayo
-Autor: Alejandro D.J Gómez F.
-Robot omnidireccional de pruebas para la Robocup
-Se abren las piezas con solid Edge V19
