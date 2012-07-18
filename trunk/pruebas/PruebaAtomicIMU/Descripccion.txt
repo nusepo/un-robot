@@ -1,0 +1,29 @@
+
+Título: Proyecto para probar el dispositivo Atomic IMU
+
+Autor: David Saldaña
+
+Fecha: 12 - Julio 2012
+
+
+
+Descripcción:
+Este es un proyecto de netbeans en el cual se realiza
+un programa que se comunica por el puerto serial para 
+capturar los datos de la tarjeta pre-programada que integra
+tres acelerometros y tres giroscopios.
+
+En el software se realiza comunicación serial y se visualizan
+los datos por medio de un gráfico de dispersión (t vs valor)
+para cada sensor.
+
+
+Requisitos:
+El proyecto funciona con Netbeans IDE 7.1.2.
+
+
+
+Información de la tarjeta:
+http://www.sparkfun.com/products/9812
+
+
