@@ -1,0 +1,9 @@
+﻿
+Título: Control para robot ominidireccional XBee API
+
+Autor: Alejandro Daniel José Gómez Flórez
+
+Fecha: 27 de julio
+
+Descripción:
+ Este trabajo, es un proyecto realizado en el NetBean 7.1.1 el cual permite por medio de una comunicación zig-bee entre módulos XBee y con ayuda de la librería XBee Api para java, Permite enviar los datos a un XBee remoto el cual está acoplado con la tarjeta de desarrollo Arduino, para asiganr los valores de velocidad a los servomotores que hacen parte de un robot omnidireccional llamado Hergo. El trabajo está basado en el documento de control omnidireccional disponible en la documentación.

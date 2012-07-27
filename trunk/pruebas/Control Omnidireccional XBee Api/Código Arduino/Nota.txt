@@ -1,0 +1,3 @@
+se deben anexar en el programa arduino las siguientes librerías:
+
+Arduino xbee api: http://code.google.com/p/xbee-arduino/downloads/list
