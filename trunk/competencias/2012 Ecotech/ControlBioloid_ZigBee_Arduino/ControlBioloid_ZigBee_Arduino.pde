@@ -9,28 +9,23 @@ void setup(){
 }
 
 void loop(){
-  
  if(Serial.available() > 12){  //Verificando el número de de bytes en el serial data buffer.
     if(Serial.read() == 0xFF && Serial.read() == 0x55){   //Comprobando bytes de inicio.
-      data = Serial.read();    
-      
-      //Ciclo para descartar los bytes restantes de la trama.
-      for(int i=0; i<Serial.available(); i++){
-        byte discard = Serial.read();
-      }
-      
+      data = Serial.read();
+
       if(data == 0x01){            //Verificando el botón del control que se oprimió (El botón "UP" corresponde a 0x01).
         //Encendiendo LED.
-        digitalWrite(led1, HIGH);
-        delay(1000);
-        digitalWrite(led1, LOW);
+      digitalWrite(led1, HIGH);
+      digitalWrite(led2, LOW);
       }else if(data == 0x02){      //Verificando el botón del control que se oprimió (El botón "DOWN" corresponde a 0x02).
         //Encendiendo LED.
         digitalWrite(led2, HIGH);
-        delay(1000);
+        digitalWrite(led1, LOW);
+      }else if(data == 0x00){
+        digitalWrite(led1, LOW);
         digitalWrite(led2, LOW);
+      }      
       }
-    }
- } 
- 
+          Serial.flush();
+    }  
 }
