@@ -19,30 +19,30 @@ void loop(){
 
       if(data == 0x01){            //Verificando el botón del control que se oprimió (El botón "UP" corresponde a 0x01).
         //adelante
-        digitalWrite(M1,HIGH);
-        digitalWrite(M2, HIGH);
-        analogWrite(E1, value);   //PWM Speed Control
-        analogWrite(E2, value);   //PWM Speed Control
+          digitalWrite(M1,HIGH);
+          digitalWrite(M2, HIGH);
+          analogWrite(E1, value);   //PWM Speed Control
+          analogWrite(E2, value);   //PWM Speed Control
       }else if(data == 0x02){      //Verificando el botón del control que se oprimió (El botón "DOWN" corresponde a 0x02).
       //atrás
-        digitalWrite(M1,LOW);
-        digitalWrite(M2, LOW);
-        analogWrite(E1, value);   //PWM Speed Control
-        analogWrite(E2, value);   //PWM Speed Control
+          digitalWrite(M1,LOW);
+          digitalWrite(M2, LOW);
+          analogWrite(E1, value);   //PWM Speed Control
+          analogWrite(E2, value);   //PWM Speed Control
       } else if(data == 0x04){
-        digitalWrite(M1,LOW);
-        digitalWrite(M2, HIGH);
-        analogWrite(E1, value);   //PWM Speed Control
-        analogWrite(E2, value);   //PWM Speed Control
+          digitalWrite(M1,LOW);
+          digitalWrite(M2, HIGH);
+          analogWrite(E1, value);   //PWM Speed Control
+          analogWrite(E2, value);   //PWM Speed Control
       } else if(data == 0x08){
-        digitalWrite(M1,HIGH);
-        digitalWrite(M2, LOW);
-        analogWrite(E1, value);   //PWM Speed Control
-        analogWrite(E2, value);   //PWM Speed Control
+          digitalWrite(M1,HIGH);
+          digitalWrite(M2, LOW);
+          analogWrite(E1, value);   //PWM Speed Control
+          analogWrite(E2, value);   //PWM Speed Control
       }else if(data == 0x00){
         //stop
-        analogWrite(E1, 0);       //PWM Speed Control
-        analogWrite(E2, 0);       //PWM Speed Control
+          analogWrite(E1, 0);       //PWM Speed Control
+          analogWrite(E2, 0);       //PWM Speed Control
       }
       }
            Serial.flush();
