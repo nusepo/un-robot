@@ -52,7 +52,7 @@ int scale(int num, int nmin, int nmax){
 }
 
 void setup(){
-  Dynamixel.begin(1000000,2);  // Inicialize the servo at 1Mbps and Pin Control 2
+  Dynamixel.begin(50000, 2);  // Inicialize the servo at 1Mbps and Pin Control 2
   mySerial.begin(9600);
   pinMode(M1, OUTPUT);   
   pinMode(M2, OUTPUT); 
@@ -70,42 +70,43 @@ void loop(){
          typeData = mySerial.read();
          //valor que acompaña al dato
          data = mySerial.read();
+         //valor transmitido
+         data2 = mySerial.read();
            if(typeData == 0xE1){
                    if(data == 0x01){
                   //adelante
                       digitalWrite(M1,HIGH);
                       digitalWrite(M2, HIGH);
-                      analogWrite(E1, value);   //PWM Speed Control
-                      analogWrite(E2, value);   //PWM Speed Control
+                      analogWrite(E1, data2);   //PWM Speed Control
+                      analogWrite(E2, data2);   //PWM Speed Control
                   }else if(data == 0x02){
                   //atrás
                       digitalWrite(M1,LOW);
                       digitalWrite(M2, LOW);
-                      analogWrite(E1, value);   //PWM Speed Control
-                      analogWrite(E2, value);   //PWM Speed Control
+                      analogWrite(E1, data2);   //PWM Speed Control
+                      analogWrite(E2, data2);   //PWM Speed Control
                   }else if(data == 0x03){
                     //giro en sentido horario
                       digitalWrite(M1,LOW);
                       digitalWrite(M2, HIGH);
-                      analogWrite(E1, value);   //PWM Speed Control
-                      analogWrite(E2, value);   //PWM Speed Control
+                      analogWrite(E1, data2);   //PWM Speed Control
+                      analogWrite(E2, data2);   //PWM Speed Control
                   }else if(data == 0x04){
                     //giro en sentido anti-horario
                       digitalWrite(M1,HIGH);
                       digitalWrite(M2, LOW);
-                      analogWrite(E1, value);   //PWM Speed Control
-                      analogWrite(E2, value);   //PWM Speed Control
+                      analogWrite(E1, data2);   //PWM Speed Control
+                      analogWrite(E2, data2);   //PWM Speed Control
                   }else if(data == 0x00){
                     //stop
                       analogWrite(E1, 0);       //PWM Speed Control
                       analogWrite(E2, 0);       //PWM Speed Control
                   }
            }else if(typeData == 0xe2){          //close 1st if type data
-                 data2 = mySerial.read();
                  if(data == 0x05){
                        moveMotor1(scale(data2, 810, 341));
                  }else if(data == 0x06){
-                       moveMotor2(scale(data2, 810, 204));
+                       moveMotor2(scale(data2, 810, 200));
                  }else if(data == 0x07){
                    //pendiete
                  }else if(data == 0x08){
