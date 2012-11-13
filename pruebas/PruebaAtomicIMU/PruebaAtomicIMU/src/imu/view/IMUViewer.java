@@ -9,7 +9,7 @@ import gnu.io.PortInUseException;
 import gnu.io.UnsupportedCommOperationException;
 import imu.controller.CapturadorIMU;
 import imu.controller.CapturadorIMUListener;
-import imu.controller.FiltroKalman;
+import imu.controller.KalmanFilter;
 import imu.model.InfoIMU;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -22,14 +22,14 @@ import java.util.logging.Logger;
 public class IMUViewer extends javax.swing.JFrame implements CapturadorIMUListener {
 
     CapturadorIMU controlador;
-    FiltroKalman fc;
+    KalmanFilter fc;
 
     /**
      * Creates new form IMUViewer
      */
     public IMUViewer() {
         initComponents();
-        fc = new FiltroKalman();
+        fc = new KalmanFilter();
 
 
         controlador = new CapturadorIMU();
@@ -201,7 +201,7 @@ public class IMUViewer extends javax.swing.JFrame implements CapturadorIMUListen
 
 
         double[] original = {nuevaInfo.getAccelerometerX(), nuevaInfo.getAccelerometerY(), nuevaInfo.getAccelerometerZ()};
-        FiltroKalman.normalize3DVector(original);
+        KalmanFilter.normalize3DVector(original);
 
         graficoSerieComparacion.agregarValor("Original", original[0]);
         graficoSerieComparacion.agregarValor("Filtrado", filtrar[0]);
