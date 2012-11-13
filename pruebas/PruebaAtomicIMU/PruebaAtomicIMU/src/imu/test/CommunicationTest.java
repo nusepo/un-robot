@@ -44,7 +44,8 @@ public class CommunicationTest implements CapturadorIMUListener {
 
     @Override
     public void nuevaInformacionIMU(InfoIMU nuevaInfo) {
-        System.out.println("New info: counter=" + nuevaInfo.getContador() + "acelX=" + nuevaInfo.getAccelerometerX());
+        System.out.println("New info: counter=" + nuevaInfo.getContador() +
+                "acelX=" + nuevaInfo.getAccelerometerX());
     }
 
     public static void main(String[] args) {
