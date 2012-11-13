@@ -107,7 +107,7 @@ public class IMUViewer extends javax.swing.JFrame implements CapturadorIMUListen
 
         getContentPane().add(graficoFiltro);
 
-        graficoSerieComparacion.setTitulo("Comparacion");
+        graficoSerieComparacion.setTitulo("Comparación señal original y filtrada");
 
         javax.swing.GroupLayout graficoSerieComparacionLayout = new javax.swing.GroupLayout(graficoSerieComparacion);
         graficoSerieComparacion.setLayout(graficoSerieComparacionLayout);

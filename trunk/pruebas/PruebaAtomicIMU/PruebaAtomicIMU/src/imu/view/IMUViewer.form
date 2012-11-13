@@ -81,7 +81,7 @@
     </Container>
     <Container class="imu.view.GraficoSerieXY" name="graficoSerieComparacion">
       <Properties>
-        <Property name="titulo" type="java.lang.String" value="Comparacion"/>
+        <Property name="titulo" type="java.lang.String" value="Comparaci&#xf3;n se&#xf1;al original y filtrada"/>
       </Properties>
 
       <Layout>
